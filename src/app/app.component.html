@@ -1,0 +1,61 @@
+<body >
+  <!-- <app-nav-menu></app-nav-menu> -->
+  <!-- <div class="container">
+    <router-outlet></router-outlet>
+    <div style="padding-top: 55px;"></div>
+  </div> -->
+
+
+ <!-- #Sidebar Start -->
+
+ <div class="control-section" id="sidebarmenu">
+  <!-- header-section  declaration -->
+  <div>
+      <ejs-toolbar id="menuToolbar" (clicked)="toolbarCliked($event)">
+          <e-items>
+              <e-item prefixIcon="e-icons e-menu" tooltipText="Menu"></e-item>
+              <e-item>
+                  <ng-template #template>
+                      <div class="e-folder">
+                          <div class="e-folder-name">Menu </div>
+                      </div>
+                  </ng-template>
+              </e-item>
+          </e-items>
+      </ejs-toolbar>
+  </div>
+  <!-- main content declaration -->
+  <!-- style="height: 1500px!important;" -->
+  <div class="main-menu-content" id="maintext" style="height: 1200px!important;" > 
+      <div class="menu-content" >
+          <div class="sidebar-heading"> </div>
+          <router-outlet></router-outlet>
+      </div>
+  </div>
+  <!-- end of main content declaration sidebar element declaration -->
+  <ejs-sidebar id="menuSidebar" class="sidebar-menu" #sidebarMenuInstance [enableDock]='enableDock'
+      [dockSize]="dockSize" [width]="width" [target]="target" [isOpen]="false" [showBackdrop]="false" type="Auto" >
+      <div class="main-menu">
+          <div>
+              <ejs-menu id="dockMenu" [items]='data'   orientation='Vertical' cssClass='dock-menu'  (select)='select($event)' ></ejs-menu>
+          </div>
+      </div>
+  </ejs-sidebar>
+</div>
+<!-- #Sidebar End -->
+
+  <div class="container-fluid">
+    <footer class="footer fixed-bottom bg-dark navbar-dark">
+      <ul class="nav justify-content-center">
+        <li class="nav-item"><div class="nav-link px-2 text-muted"> @ {{getCurrentYearLong()}} | Genesis Training </div></li>
+        <li class="nav-item" style="padding-left:20px"><a target="_blank" href="https://www.instagram.com/genetikpilatesgenesis/"  class="nav-link px-2 text-muted"><img src="assets/images/logo/instagram.png" width="24px" height="24px"></a></li>
+        <li class="nav-item"><a target="_blank" href="https://goo.gl/maps/JCVEKGubsJbBaPNSA"  class="nav-link px-2 text-muted"><img src="assets/images/logo/maps.png" width="24px" height="24px"></a></li>
+      </ul>
+    </footer>
+  </div>
+ 
+</body>
+
+<html>
+  <b></b>
+</html>

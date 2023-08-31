@@ -1,0 +1,36 @@
+<header style="padding-bottom: 30px;">
+  <nav class="navbar nav-pills navbar-expand-sm navbar-toggleable-sm sticky-top navbar-light bg-white" border-bottom box-shadow
+    mb-3>
+    <div class=" container">
+      <a class="navbar-brand" [routerLink]="['/']"><img src="assets/images/logo/genesis-logo.png" width="128" height="128"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+        aria-label="Toggle navigation" [attr.aria-expanded]="isExpanded" (click)="toggle()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse d-sm-inline-flex justify-content-start" [ngClass]="{ show: isExpanded }">
+        <ul class="navbar-nav flex-grow navbar-big-text" style="gap:10px">
+          <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">
+            <a class="nav-link " [routerLink]="['/']">Ana Sayfa</a>
+          </li>
+
+          <li class="nav-item" [routerLinkActive]="['active']">
+            <a class="nav-link" [routerLink]="['/gallery']">Galeri</a>
+          </li>
+          <!-- <li class="nav-item" [routerLinkActive]="['active']">
+            <a class="nav-link" [routerLink]="['/studios']">Stüdyolar</a>
+          </li> -->
+          <li class="nav-item" [routerLinkActive]="['active']">
+            <a class="nav-link" [routerLink]="['/team']">Ekibimiz</a>
+          </li>
+
+          <li class="nav-item" [routerLinkActive]="['active']">
+            <a class="nav-link" [routerLink]="['/about']">Hakkımızda</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['active']">
+            <a class="nav-link " [routerLink]="['/contact']">İletişim</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,40 @@
+<div class="container-fluid">
+	<div class="container">
+
+		<div style="text-align: center;justify-content: center;">
+		<img src="assets/images/logo/genesis-logo.png" width="128" height="128" class="img-fluid" style="padding-bottom: 50px;">
+		</div>
+		<ngb-carousel #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus"
+			(slide)="onSlide($event)" [showNavigationIndicators]="false" >
+			<ng-template ngbSlide>
+				<div class="container">
+					<div class="row">
+						<div class="carousel-caption slide-caption-bottom-left ">
+							<h6>Genesis Pilates</h6>
+							<p></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="picsum-img-wrapper">
+					<a [routerLink]="['/gallery']"> <img class=" img-fluid w-100" [src]="images[0]" alt="" /> </a>
+				</div>
+			</ng-template>
+			<ng-template ngbSlide>
+				<div class="carousel-caption slide-caption-bottom-left white-text">
+					<h6>Genesis Training</h6>
+					<p></p>
+				</div>
+				<div class="picsum-img-wrapper">
+					<a [routerLink]="['/gallery']"> <img class=" img-fluid w-100" [src]="images[1]" alt="" /> </a>
+				</div>
+			</ng-template>
+		</ngb-carousel>
+		<div class="d-flex flex-row" style="justify-content: center;padding-top: 10px;">
+			<div>
+				<button type="button" [routerLink]="['/contact']" class="btn btn-dark"><i class="bi bi-telephone"></i>
+					Bize Ulaşın</button>
+
+			</div>
+		</div>
+	</div>

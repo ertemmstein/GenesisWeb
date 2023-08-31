@@ -1,0 +1,17 @@
+<div style="background: black;color: white;">
+    <div class="container">
+        <h3 style="text-align: center;">Galeri </h3>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" style="padding-top: 20px;">
+        <div *ngFor="let image of album; let i=index" class="col col-xs-2 col-sm-2 col-md-6 col-lg-2    " style="padding-top: 10px;">
+            <a class="nav-link" target="_blank"></a>
+            <a (click)="$event.stopPropagation();false" href="#" class="nav-link px-2 text-muted"><img
+                    [src]="image.thumb" (click)="open(i)" width="90" height="60" ></a>
+        </div>
+    </div>
+
+
+</div>
