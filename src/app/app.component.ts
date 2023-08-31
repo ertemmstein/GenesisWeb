@@ -1,4 +1,4 @@
-import { Component, ElementRef, Inject, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { HostListener,Component, ElementRef, Inject, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { ClickEventArgs, FieldSettingsModel, MenuEventArgs, MenuItemModel, SidebarComponent } from '@syncfusion/ej2-angular-navigations';
 import { Router } from '@angular/router';
 import { ASTWithSource } from '@angular/compiler';
@@ -11,7 +11,11 @@ import { ASTWithSource } from '@angular/compiler';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements OnInit {
-  //@ViewChild('sidebarTreeviewInstance')
+  
+  @HostListener('window:beforeunload') goToPage() {
+    this.router.navigate(['']);
+  }
+
   @ViewChild('sidebarMenuInstance')
   public sidebarMenuInstance: SidebarComponent;
   public data: MenuItemModel[] = [
@@ -60,7 +64,7 @@ export class AppComponent implements OnInit {
 
   }
   ngOnInit() {
-    this.router.navigate(['']);
+    //this.router.navigate(['home']);
   }
 
 
