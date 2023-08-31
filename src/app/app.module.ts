@@ -46,7 +46,7 @@ import { SidebarModule,TreeViewModule,ToolbarModule,MenuModule } from '@syncfusi
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
-      { path: 'gallery', component: AboutComponent },
+      { path: 'gallery', component: GalleryComponent },
       { path: 'studios', component: StudiosComponent },
       { path: 'team', component: TeamComponent },
       //{ path: 'about', component: AboutComponent },
