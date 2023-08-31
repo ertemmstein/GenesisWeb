@@ -132,7 +132,6 @@
       }
     }
   },
-  "defaultProject": "Genesis",
   "cli": {
     "analytics": "cf27cd13-1b1a-4058-ae25-dea49ac21a16"
   }
