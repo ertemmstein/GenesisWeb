@@ -1,4 +1,4 @@
-import { HostListener,Component, ElementRef, Inject, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { ClickEventArgs, FieldSettingsModel, MenuEventArgs, MenuItemModel, SidebarComponent } from '@syncfusion/ej2-angular-navigations';
 import { Router } from '@angular/router';
 import { ASTWithSource } from '@angular/compiler';
@@ -12,9 +12,6 @@ import { ASTWithSource } from '@angular/compiler';
 })
 export class AppComponent implements OnInit {
   
-  @HostListener('window:beforeunload') goToPage() {
-    this.router.navigate(['']);
-  }
 
   @ViewChild('sidebarMenuInstance')
   public sidebarMenuInstance: SidebarComponent;
@@ -64,7 +61,7 @@ export class AppComponent implements OnInit {
 
   }
   ngOnInit() {
-    //this.router.navigate(['home']);
+    this.router.navigate(['']);
   }
 
 
