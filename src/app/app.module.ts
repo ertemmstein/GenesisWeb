@@ -18,6 +18,8 @@ import { ContactComponent } from './contact/contact.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LightboxModule } from 'ngx-lightbox';
 import { SidebarModule,TreeViewModule,ToolbarModule,MenuModule } from '@syncfusion/ej2-angular-navigations';
+import { PrivacypolicyComponent } from './privacypolicy/privacypolicy.component';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { SidebarModule,TreeViewModule,ToolbarModule,MenuModule } from '@syncfusi
     StudiosComponent,
     TeamComponent,
     AboutComponent,
-    ContactComponent  ],
+    ContactComponent,
+    PrivacypolicyComponent  ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
@@ -45,14 +48,14 @@ import { SidebarModule,TreeViewModule,ToolbarModule,MenuModule } from '@syncfusi
     //Navigation
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'home', component: HomeComponent },
+      { path: 'home', redirectTo:'' },
       { path: 'gallery', component: GalleryComponent },
       { path: 'studios', component: StudiosComponent },
       { path: 'team', component: TeamComponent },
       //{ path: 'about', component: AboutComponent },
       { path: 'contact', component: ContactComponent },
-    ])
-  ],
+      { path: 'privacy-policy',  component: PrivacypolicyComponent,  },
+    ] ,{onSameUrlNavigation:'reload'})],
   providers: [],
   bootstrap: [AppComponent]
 })

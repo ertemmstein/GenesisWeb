@@ -61,7 +61,7 @@ export class AppComponent implements OnInit {
 
   }
   ngOnInit() {
-    this.router.navigate(['']);
+    //this.router.navigate(['']);
   }
 
 
